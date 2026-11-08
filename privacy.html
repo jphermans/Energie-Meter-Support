@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#11171F" />
+<title>Privacyverklaring — Energie Meter</title>
+<meta name="description" content="Privacyverklaring van Energie Meter (JPHsystems): geen account, geen analytics, geen server. Je June-token blijft in de Keychain van je toestel." />
+<link rel="icon" href="assets/icon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<style>
+  :root {
+    --bg: #11171F; --card: #1B2531; --line: #263241;
+    --text: #E8EEF6; --muted: #9AA9BC; --accent: #5FC08A; --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px 80px; }
+  header { border-bottom: 1px solid var(--line); background: linear-gradient(180deg, rgba(95,192,138,.08), transparent); }
+  .head { display: flex; align-items: center; gap: 14px; padding: 26px 0 22px; }
+  .head img { width: 48px; height: 48px; border-radius: 12px; }
+  .head h1 { font-size: 23px; margin: 0 0 2px; letter-spacing: -.01em; }
+  .head p { margin: 0; color: var(--muted); font-size: 14px; }
+  section { padding-top: 34px; }
+  h2 { font-size: 18px; margin: 0 0 10px; }
+  h3 { font-size: 15px; margin: 20px 0 6px; }
+  p, li { color: #D3DDE9; }
+  .muted { color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin: 14px 0; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 5px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  footer { border-top: 1px solid var(--line); margin-top: 44px; padding: 20px 0; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="head">
+      <img src="assets/icon-128.png" alt="Energie Meter" />
+      <div>
+        <h1>Privacyverklaring</h1>
+        <p>Energie Meter · JPHsystems · laatst bijgewerkt 8 november 2026</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>Kort</h2>
+    <div class="card">
+      <p><strong>Wij verzamelen niets en wij bewaren niets.</strong> Er is geen account bij JPHsystems, geen analytics, geen advertentienetwerk en geen server van ons die je gegevens ziet. Alles wat de app weet, staat op je eigen toestel of bij de partijen waar je zelf al klant bent.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Welke gegevens de app gebruikt</h2>
+    <div class="card">
+      <table>
+        <tr><th>Gegeven</th><th>Waar het staat</th><th>Waarom</th></tr>
+        <tr>
+          <td>Je June-token (inloggegevens)</td>
+          <td>Keychain van je toestel</td>
+          <td>Om je verbruik bij de June-API op te halen. Het token gaat nooit naar iCloud en nooit naar ons.</td>
+        </tr>
+        <tr>
+          <td>Je instellingen: taal, meters, gewest, gas eenheid, jaarverbruik, huidige leverancier</td>
+          <td>Lokaal op je toestel; optioneel je eigen iCloud</td>
+          <td>Zodat de app onthoudt hoe je hem ingesteld hebt. De schakelaar “Instellingen synchroniseren via iCloud” bepaalt of dat via je eigen iCloud gaat.</td>
+        </tr>
+        <tr>
+          <td>Verbruikscijfers en meterstanden</td>
+          <td>Alleen op je toestel en in de cache van de widget</td>
+          <td>Om de grafieken en de tegel te tonen zonder elke keer opnieuw te laden.</td>
+        </tr>
+        <tr>
+          <td>Prijzen, nettarieven en accijnzen</td>
+          <td>Openbare bestanden van de regulators, lokaal bewaard</td>
+          <td>De app werkt ook zonder internet met de laatst opgehaalde cijfers.</td>
+        </tr>
+      </table>
+      <p class="muted">Er is geen veld waarin je iets over jezelf invult, en de app vraagt nooit om je adres, je rijksregisternummer of je EAN-code.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Naar wie de app verbinding maakt</h2>
+    <div class="card">
+      <ul>
+        <li><strong>June</strong> (app.june.energy, api.june.energy) — om je eigen verbruik op te halen, met jouw token. Alleen als je inlogt.</li>
+        <li><strong>Vlaamse Nutsregulator</strong> — de maandelijkse V-test met de leveranciersprijzen.</li>
+        <li><strong>Energy-Charts (Fraunhofer ISE)</strong> — de day-ahead kwartierprijzen van de Belgische biedzone.</li>
+        <li><strong>De website van een leverancier of netbeheerder</strong> — alleen als je zelf op een link tikt.</li>
+      </ul>
+      <p class="muted">Bij die verzoeken ziet de ontvangende partij wat elke website ziet: je IP-adres en je toesteltype. Er gaat geen profiel, geen apparaat-ID en geen locatie mee.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Wat de app niet doet</h2>
+    <div class="card">
+      <ul>
+        <li>Geen account, geen aanmelding bij JPHsystems, geen e-mailadres nodig.</li>
+        <li>Geen analytics, geen crashrapportage naar derden, geen advertenties, geen tracking tussen apps of websites.</li>
+        <li>Geen verkoop of deling van gegevens met wie dan ook.</li>
+        <li>Geen toegang tot je contacten, foto's, locatie, microfoon of camera.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Je gegevens verwijderen</h2>
+    <div class="card">
+      <p>Zet de app weg: alles wat lokaal stond verdwijnt mee. Wil je het token meteen wissen zonder de app te verwijderen, gebruik dan <strong>Instellingen → Token wissen</strong>. Zet je iCloud-synchronisatie uit en verwijder daarna de app, dan blijft er ook in je iCloud niets achter.</p>
+      <p class="muted">Bij June beheer je je eigen account; hun bewaartermijnen staan in hun eigen privacybeleid. JPHsystems heeft daar geen inzage in en geen vat op.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kinderen</h2>
+    <div class="card">
+      <p>De app is bedoeld voor iedereen die zijn eigen energieverbruik en energiefactuur wil begrijpen. Er worden geen gegevens van gebruikers bewaard, dus ook niet van kinderen.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Wijzigingen</h2>
+    <div class="card">
+      <p>Verandert er iets aan wat de app doet, dan past deze pagina mee en staat de datum bovenaan. De app zelf blijft dezelfde: geen server, geen account.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Vragen over privacy: <a href="mailto:jp@jphsystems.io?subject=Energie%20Meter%20—%20privacy">jp@jphsystems.io</a></p>
+      <p class="muted">Energie Meter is een persoonlijk project van JPHsystems en is niet verbonden aan June Energy NV, de Vlaamse Nutsregulator (VREG), de CREG, Fluvius, ORES, Sibelga of Elia. June is een handelsmerk van June Energy NV.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Energie Meter · JPHsystems · <a href="index.html">terug naar de app-pagina</a></p>
+  </footer>
+</main>
+</body>
+</html>

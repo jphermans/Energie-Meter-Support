@@ -65,6 +65,11 @@
     padding: 1px 6px; font-size: 13px;
   }
   footer { border-top: 1px solid var(--line); margin-top: 46px; padding: 20px 0; color: var(--muted); font-size: 13px; }
+  .shots { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 6px; }
+  @media (max-width: 560px) { .shots { grid-template-columns: 1fr; } }
+  .shot { margin: 0; }
+  .shot img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); background: #0E141B; }
+  .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 7px; }
   .badge { display: inline-block; font-size: 12px; color: var(--accent); border: 1px solid rgba(95,192,138,.35); border-radius: 999px; padding: 2px 10px; }
 </style>
 </head>
@@ -80,6 +85,7 @@
     </div>
     <nav>
       <a href="#wat">Wat het doet</a>
+      <a href="#schermen">Schermen</a>
       <a href="#bron">Waar de cijfers vandaan komen</a>
       <a href="privacy.html">Privacy</a>
       <a href="#support">Support</a>
@@ -111,6 +117,34 @@
         <p>Werkt de June-dongle even niet, dan blijft de app bruikbaar: prijzen, vergelijken, all-in en de officiële links blijven beschikbaar.</p>
       </div>
     </div>
+  </section>
+
+
+  <section id="schermen">
+    <h2>Zo ziet het eruit</h2>
+    <p class="muted">Schermafbeeldingen met voorbeeldgegevens — geen echte meterstanden van iemand.</p>
+    <div class="shots">
+      <figure class="shot">
+        <img src="assets/shots/ios-dag.png" alt="Dagoverzicht met afname dag en nacht, injectie en gas, en de kwartiergrafiek" loading="lazy" />
+        <figcaption><strong>Dag.</strong> Afname dag en nacht, injectie en gas, met de kwartiergrafiek van vandaag. Veeg op de grafiek om de hele dag te zien.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/shots/ios-maand.png" alt="Maandoverzicht met gestapelde staven per dag" loading="lazy" />
+        <figcaption><strong>Maand.</strong> Dezelfde cijfers per dag, gestapeld: dag en nacht onder elkaar, met de som per dag.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/shots/ios-prijzen.png" alt="Prijzenlijst van de leveranciers met bron en maand" loading="lazy" />
+        <figcaption><strong>Prijzen.</strong> De V-test van de VREG, per leverancier en per product, met de bron en de publicatiemaand bij elk cijfer.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/shots/ios-vergelijken.png" alt="Vergelijking van contracten met de jaarprijs" loading="lazy" />
+        <figcaption><strong>Vergelijken.</strong> Wat elk contract je jaar kost, met je eigen verbruik en de btw-keuze. Goedkoper groen, duurder rood.</figcaption>
+      </figure>
+    </div>
+    <figure class="shot" style="margin-top:18px">
+      <img src="assets/shots/mac-dag.png" alt="Dezelfde app als volwaardig venster op de Mac" loading="lazy" />
+      <figcaption><strong>Ook op de Mac.</strong> Hetzelfde dashboard als volwaardig venster, met dezelfde cijfers, dezelfde grafieken en dezelfde prijzen. Er is ook een widget en een menubalkversie.</figcaption>
+    </figure>
   </section>
 
   <section id="bron">
